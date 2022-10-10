@@ -21,19 +21,19 @@ public class Lab3 {
         int nbCons = 0, nbVows = 0;
 
         //Check number of characters in the sentence
-        for(int i = 0; i<sentence.length(); i++){
+        for(int i = 0; i < sentence.length(); i++) {
 
-            //Get the current character
-            char curr= sentence.charAt(i);
+            //Working with a String instead of char, so we put the sentence on lower case to ignore the caps.
+            // We would have to add the uppercase letters to the condition if we would work with chars
+            String curr = String.valueOf(sentence.charAt(i)).toLowerCase();
 
-            //Could've used an array. Though vowels are not something changing every year, so it's okay to be put "roughly"
-            if(curr == 'a' || curr == 'e' || curr == 'i' || curr == 'o' || curr == 'u' || curr == 'y')
+            //Could've used an array.
+            if (curr.equals("a") || curr.equals("e") || curr.equals("i") || curr.equals("o") || curr.equals("u") || curr.equals("y"))
                 nbVows++;
             else
                 nbCons++;
-
         }
-
-        System.out.println(nbVows);
+        System.out.println("Number of vowels: \t\t" + nbVows);
+        System.out.println("Number of consonants: \t" + nbCons);
     }
 }

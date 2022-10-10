@@ -14,8 +14,9 @@ public class Lab5 {
         //Declaration and initialisation of the variables
         int[] myArray = new int[100];
         Random r = new Random();
+        int tmpSuccession = 0;
         int longestSuccession = 0;
-        boolean isEven = false;
+        boolean isEven = true;
         int maxDif = 0;
         int lastLoop = 0;
 
@@ -43,21 +44,27 @@ public class Lab5 {
 
             //Check if number is even
             if(myArray[i] % 2 == 0){
-                //If the last number was also an even number --> We increment the counter
-                if(isEven){
-                    longestSuccession += 1;
-                }else{
+
+                //If the last number was also an even number. Then, we increment the counter
+                if(isEven)
+                    tmpSuccession += 1;
+                else{
+
                     //Otherwise, we say that we encountered an even number and reset the counter
                     isEven = true;
-                    longestSuccession = 0;
-                    longestSuccession += 1;
+                    tmpSuccession = 0;
+                    tmpSuccession += 1;
                 }
             }else{
                 //If the current number is odd. We put the boolean at "false"
                 isEven = false;
+
+                if(tmpSuccession > longestSuccession){
+                    longestSuccession = tmpSuccession;
+                }
             }
 
-            //Lastloop is used to detect the greatest difference between two successive numbers
+            //lastloop is used to detect the greatest difference between two successive numbers
             lastLoop = myArray[i];
         }
 
