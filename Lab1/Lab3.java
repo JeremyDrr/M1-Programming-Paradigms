@@ -24,7 +24,7 @@ public class Lab3 {
         for(int i = 0; i < sentence.length(); i++) {
 
             //Working with a String instead of char, so we put the sentence on lower case to ignore the caps.
-            // We would have to add the uppercase letters to the condition if we would work with chars
+            //We would have to add the uppercase letters to the condition if we would work with chars
             String curr = String.valueOf(sentence.charAt(i)).toLowerCase();
 
             //Could've used an array.

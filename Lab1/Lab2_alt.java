@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class Lab2_alt {
+
+    /*
+     * We use the Scanner class to read from keyboard
+     */
+
     public static void main(String args[]){
 
         //Call the function. Just specifying what input is required

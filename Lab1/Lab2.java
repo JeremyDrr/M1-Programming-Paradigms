@@ -3,11 +3,15 @@ import java.util.Scanner;
 public class Lab2 {
     public static void main(String args[]){
 
-        //Declaration of the scan variable. To avoid repeating stuff. A function returning a string would have been perfect as well.
-        //String myVariable = myScanFunction("Enter the desired text here");
-        //To see more of this more flexible alternative, code is available in the class "Lab2_alt"
+        /*
+         * We use the Scanner class to read from keyboard
+         */
 
+        //Declaration of the scan variable.
         Scanner scan = new Scanner(System.in);
+
+        //To avoid repeating stuff. A function returning a string would have been perfect as well.
+        //To see more of this more flexible alternative, code is available in the class "Lab2_alt"
 
         System.out.println("Enter your first name");
         String fName = scan.nextLine();
