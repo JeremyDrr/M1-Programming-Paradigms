@@ -22,23 +22,21 @@ public class Main {
         Person p3 = new Person("Cherlyn", "797-24-4325", "76148 Surrey Junction");
         Person p4 = new Person("Mace", "293-36-5688", "3154 Waywood Hill");
         Person p5 = new Person("Peta", "162-58-9366", "27872 Lyons Way");
-
-        //Declaration of the different lists
+        
+        System.out.println("\t\tArrayList:");
         ArrayList<Person> personArrayList = new ArrayList<>(Arrays.asList(p1, p2, p3, p4, p5));
+        personArrayList.forEach(person -> System.out.println(person.getName()));
+        System.out.println("Size: " + personArrayList.size());
+
+        System.out.println("\n\t\tHashSet:");
         HashSet<Person> personHashSet = new HashSet<>(Arrays.asList(p1, p2, p3, p4, p5));
-        TreeSet<Person> personTreeSet = new TreeSet<>();
+        personHashSet.forEach(person -> System.out.println(person.getName()));
+        System.out.println("Size: " + personHashSet.size());
 
-        personTreeSet.add(p1);
-        personTreeSet.add(p2);
-        personTreeSet.add(p3);
-        personTreeSet.add(p4);
-        personTreeSet.add(p5);
-
-        for (int i = 0; i < personArrayList.size(); i++) {
-            System.out.println(personArrayList.get(i).getName());
-        }
-
-        //TODO: Bruh, I really don't get that one ._.
+        System.out.println("\n\t\tTreeSet:");
+        TreeSet<Person> personTreeSet = new TreeSet<>(Arrays.asList(p1, p2, p3, p4, p5));
+        personTreeSet.forEach(person -> System.out.println(person.getName()));
+        System.out.println("Size: " + personTreeSet.size());
 
     }
 }
