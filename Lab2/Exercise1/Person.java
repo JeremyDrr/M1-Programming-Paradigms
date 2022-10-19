@@ -8,12 +8,12 @@ public class Person implements Comparable<Person>{
     private String address;
 
     //Constructor by default
-    public Person(){
+    public Person() {
 
     }
 
     //Constructor with parameters
-    public Person(String name, String cnp, String address){
+    public Person(String name, String cnp, String address) {
         this.name = name;
         this.cnp = cnp;
         this.address = address;
@@ -44,9 +44,10 @@ public class Person implements Comparable<Person>{
         this.address = address;
     }
 
-    //compareTo method. Implemented from Comparable
+    //Override the method from the Comparable interface
     @Override
-    public int compareTo(final Person o) {
-        return name.compareTo(o.getName());
+    public int compareTo(Person o) {
+
+        return this.name.compareTo(o.name);
     }
 }

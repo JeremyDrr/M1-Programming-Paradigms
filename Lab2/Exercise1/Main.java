@@ -1,24 +1,44 @@
 package Exercise1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.TreeSet;
 
 public class Main {
 
+    /*
+     * Implement a class Person(name, cnp, address…) and create 5 objects of this class with 2 objects with equal values. Then :
+     * • Put it in an ArrayList
+     * • Put it in a HashSet -> implement equals and hashCode
+     * • Put it in a TreeSet -> implement Comparable
+     */
+
     public static void main(String[] args) {
 
+        //Instance of the objects
         Person p1 = new Person("Dolli", "859-30-1073", "4848 Heath Park");
-        Person p2 = new Person("Nertie", "770-56-5772", "3 Forest Dale Hill");
+        Person p2 = new Person("Dolli", "859-30-1073", "4848 Heath Park");
         Person p3 = new Person("Cherlyn", "797-24-4325", "76148 Surrey Junction");
         Person p4 = new Person("Mace", "293-36-5688", "3154 Waywood Hill");
         Person p5 = new Person("Peta", "162-58-9366", "27872 Lyons Way");
 
-        ArrayList<Person> personArrayList = new ArrayList<>();
-        HashSet<Person> personHashSet = new HashSet<>();
+        //Declaration of the different lists
+        ArrayList<Person> personArrayList = new ArrayList<>(Arrays.asList(p1, p2, p3, p4, p5));
+        HashSet<Person> personHashSet = new HashSet<>(Arrays.asList(p1, p2, p3, p4, p5));
         TreeSet<Person> personTreeSet = new TreeSet<>();
 
-        //TODO: Too lazy rn
+        personTreeSet.add(p1);
+        personTreeSet.add(p2);
+        personTreeSet.add(p3);
+        personTreeSet.add(p4);
+        personTreeSet.add(p5);
+
+        for (int i = 0; i < personArrayList.size(); i++) {
+            System.out.println(personArrayList.get(i).getName());
+        }
+
+        //TODO: Bruh, I really don't get that one ._.
 
     }
 }

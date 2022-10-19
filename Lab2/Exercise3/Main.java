@@ -4,6 +4,12 @@ import java.util.LinkedList;
 
 public class Main {
 
+    /*
+     * Implement a Stack using a LinkedList. Using the Stack create a program to evaluate expressions written
+     * in postfix order. http://en.wikipedia.org/wiki/Reverse_Polish_notation
+     */
+
+    //Function to convert the expression and return the result
     static int postfixMethod(String exp){
 
         LinkedList<Integer> stack=new LinkedList<>();

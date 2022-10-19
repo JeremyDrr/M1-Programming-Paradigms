@@ -2,12 +2,14 @@ package Exercise2;
 
 public class Employee{
 
+    //Attributes
     private String fName;
     private String lName;
     private String email;
     private String address;
     private double salary;
 
+    //Constructor with parameters
     public Employee(String fName, String lName, String email, String address, double salary) {
         this.fName = fName;
         this.lName = lName;
@@ -16,6 +18,7 @@ public class Employee{
         this.salary = salary;
     }
 
+    //Getters and setters
     public String getfName() {
         return fName;
     }
