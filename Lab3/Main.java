@@ -7,10 +7,10 @@ public class Main {
         ArrayList<Publication> aPublications = new ArrayList<>();
         Calendar a1Cal = new Calendar.Builder().setDate(1999,6,24).build();
         Calendar a2Cal = new Calendar.Builder().setDate(2000,6,24).build();
-        Journal aJournal1 = new Journal("Jeremy's journal 1", a1Cal, 1, "The art of being a pufi", 1);
-        Journal aJournal2 = new Journal("Jeremy's journal 2", a2Cal, 1, "The art of making toilet paper", 1);
-        ConferenceProceeding aConf1 = new ConferenceProceeding("Volume 1", a1Cal, 1, "Why I moved to the East", true);
-        ConferenceProceeding aConf2 = new ConferenceProceeding("Volume 2", a2Cal, 3, "Why am I so clumsy?", false);
+        Journal aJournal1 = new Journal("Jeremy's journal 1", a1Cal, 1, "Journal 1", 1);
+        Journal aJournal2 = new Journal("Jeremy's journal 2", a2Cal, 1, "Journal 2", 1);
+        ConferenceProceeding aConf1 = new ConferenceProceeding("Volume 1", a1Cal, 1, "Conference 1", true);
+        ConferenceProceeding aConf2 = new ConferenceProceeding("Volume 2", a2Cal, 3, "Conference 2", false);
         aPublications.add(aJournal1);
         aPublications.add(aJournal2);
         aPublications.add(aConf1);
